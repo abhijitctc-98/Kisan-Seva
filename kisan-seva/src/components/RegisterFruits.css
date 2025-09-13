@@ -1,0 +1,59 @@
+.register-fruits {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.register-fruits form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fruit-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.register-fruits select,
+.register-fruits input {
+  padding: 0.8rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.register-fruits select:focus,
+.register-fruits input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.register-fruits button {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-fruits button[type="button"] {
+  background: #28a745;
+  color: white;
+}
+
+.register-fruits button[type="submit"] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.register-fruits button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
