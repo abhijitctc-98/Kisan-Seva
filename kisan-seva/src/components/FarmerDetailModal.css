@@ -1,0 +1,266 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.modal-header h2 {
+  color: #2d3748;
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #a0aec0;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #718096;
+  background: #f7fafc;
+}
+
+.farmer-profile {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.profile-info h3 {
+  color: #2d3748;
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+}
+
+.profile-info p {
+  color: #718096;
+  margin: 0;
+}
+
+.fruits-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background: #f7fafc;
+}
+
+.summary-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.summary-value {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.summary-label {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.fruits-section {
+  padding: 2rem;
+}
+
+.fruits-section h3 {
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.distribution-chart {
+  display: flex;
+  height: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-bar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.chart-bar:nth-child(1) { background: #667eea; }
+.chart-bar:nth-child(2) { background: #764ba2; }
+.chart-bar:nth-child(3) { background: #6b46c1; }
+.chart-bar:nth-child(4) { background: #553c9a; }
+.chart-bar:nth-child(5) { background: #44337a; }
+
+.bar-label {
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fruits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.fruit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f7fafc;
+  transition: all 0.2s ease;
+}
+
+.fruit-item:hover {
+  background: #edf2f7;
+  transform: translateX(5px);
+}
+
+.fruit-name {
+  font-weight: 600;
+  color: #2d3748;
+  flex: 1;
+}
+
+.fruit-details {
+  display: flex;
+  gap: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.fruit-quantity, .fruit-price {
+  font-weight: 500;
+  min-width: 80px;
+}
+
+.fruit-quantity {
+  color: #2b6cb0;
+}
+
+.fruit-price {
+  color: #2d3748;
+}
+
+.fruit-percentage {
+  font-weight: 600;
+  color: #667eea;
+  min-width: 50px;
+  text-align: right;
+}
+
+.no-fruits {
+  text-align: center;
+  padding: 2rem;
+  color: #718096;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modal-content {
+    max-height: 95vh;
+  }
+  
+  .farmer-profile {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .fruits-summary {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .fruits-section {
+    padding: 1.5rem;
+  }
+  
+  .fruit-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .fruit-details {
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 0;
+  }
+  
+  .fruit-percentage {
+    align-self: flex-end;
+  }
+  
+  .bar-label {
+    font-size: 0.6rem;
+  }
+}
