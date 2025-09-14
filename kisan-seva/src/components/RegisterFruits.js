@@ -140,6 +140,9 @@ const RegisterFruits = () => {
                     <option value="Banana">Banana</option>
                     <option value="Orange">Orange</option>
                     <option value="Mango">Mango</option>
+                    <option value="Kiwi">Kiwi</option>
+                    <option value="Apricot">Apricot</option>
+                    <option value="Strawberry">Strawberry</option>
                   </select>
                   {fruitErrors.some(e => e.field === 'category') && (
                     <span className="error-message">
