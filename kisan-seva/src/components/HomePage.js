@@ -51,7 +51,7 @@ const HomePage = () => {
     <div className="homepage">
       <header className="hero-section">
         {createParticles()}
-        <h1>Welcome to Kisan Seva</h1>
+        <h1>Welcome to UdyaanKalana</h1>
         <p>Empowering Farmers, Connecting Communities</p>
         <div className="cta-buttons">
           <button onClick={() => navigate('/login')} className="cta-btn farmer-btn">
@@ -64,7 +64,7 @@ const HomePage = () => {
       </header>
 
       <section className="features-section">
-        <h2>Why Choose Kisan Seva?</h2>
+        <h2>Why Choose UdyaanKalana?</h2>
         <div className="features-grid">
           {[
             {

@@ -15,7 +15,7 @@ const NavBar = () => {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          Kisan Seva
+          UdyaanKalana
         </Link>
         <ul className="nav-menu">
           <li className="nav-item">
